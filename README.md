@@ -8,10 +8,11 @@ Student ID: [700776947]
 Overview of the Assignment
 This repository contains the solution for **Neural networks Assignment, covering fundamental deep learning concepts using TensorFlow. The assignment consists of four main tasks:
 
-Tensor Operations & Reshaping
-Loss Function Analysis & Hyperparameter Adjustment
-Model Training Using Different Optimizers
-Neural Network Training with TensorBoard Logging
+1,Tensor Operations & Reshaping
+2,Loss Function Analysis & Hyperparameter Adjustment
+3,Neural Network Training with TensorBoard Logging
+
+
 Prerequisites
 Before executing the script, ensure the following are installed:
 
@@ -22,6 +23,8 @@ Matplotlib
 To install dependencies, execute:
 
 pip install tensorflow numpy matplotlib
+
+
 Execution Instructions
 Clone the repository and navigate to the directory:
 
