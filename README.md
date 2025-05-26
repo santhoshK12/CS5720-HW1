@@ -21,12 +21,10 @@ CS5720_HW1.ipynb`
    
 2.Open the notebook in Colab 
 Click on `CS5720_HW1.ipynb`.  
-In the file preview, click **“Open in Colab”** (or download it and then upload into Colab).
+In the file preview, click download it and then upload into Colab.
 
 Run every cell
-In Colab, each box of code is called a “cell.”  
-Click the first cell and press **Shift + Enter** (or click the ▶️ play button).  
-Do this for every cell, from top to bottom.
+then we can see the outputs of three tasks in the code
 
 Viewing TensorBoard (Task 3)
 
@@ -34,4 +32,6 @@ Viewing TensorBoard (Task 3)
 ```python
 %load_ext tensorboard
 %tensorboard --logdir logs/fit
+
+thats it we can see the outputs or answers for the all questions.
 
