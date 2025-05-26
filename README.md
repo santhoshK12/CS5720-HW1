@@ -64,5 +64,5 @@ Step 1: Enable TensorBoard Logging log_directory = "logs/fit/" os.makedirs(log_d
 
 Step 2: Train Model with TensorBoard Callback model_tb = build_model() model_tb.compile(optimizer=Adam(), loss='sparse_categorical_crossentropy', metrics=['accuracy']) tb_callback = tf.keras.callbacks.TensorBoard(log_dir=log_directory, histogram_freq=1) model_tb.fit(train_images, train_labels, epochs=5, validation_data=(test_images, test_labels), callbacks=[tb_callback]) Logs training accuracy and loss.
 
-Step 3: Launch TensorBoard print("To launch TensorBoard, use: tensorboard --l
+Step 3: Launch TensorBoard print("To launch TensorBoard, use: tensorboard --logdir logs/fit/")
 
