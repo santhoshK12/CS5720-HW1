@@ -19,7 +19,6 @@ Before executing the script, ensure the following are installed:
 Python (>=3.7)
 TensorFlow (>=2.x)
 NumPy
-Matplotlib
 To install dependencies, execute:
 
 pip install tensorflow numpy matplotlib
