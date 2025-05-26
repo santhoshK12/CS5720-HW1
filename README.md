@@ -1,18 +1,17 @@
 # Neural networks In-Home Assignment
 
 ## University of Central Missouri
-**Course:** CS5720 - Neural Networks and Deep Learning  
-**Term:** Spring 2025  
-**Student Name:** [Vamsi Dama]  
-**Student ID:** [700771673]  
+**Course:** Neural Networks and Deep Learning  
+**Term:**  SUMMER 2025
+**Student Name:** SANTHOSH REDDY KISTIPATI 
+**Student ID:** [700776947]  
 
 ## Overview of the Assignment
 This repository contains the solution for **Neural networks Assignment, covering fundamental deep learning concepts using TensorFlow. The assignment consists of four main tasks:
 
 1. **Tensor Operations & Reshaping**
 2. **Loss Function Analysis & Hyperparameter Adjustment**
-3. **Model Training Using Different Optimizers**
-4. **Neural Network Training with TensorBoard Logging**
+3. **Neural Network Training with TensorBoard Logging**
 
 ## Prerequisites
 Before executing the script, ensure the following are installed:
@@ -42,6 +41,7 @@ After training, logs can be viewed using TensorBoard:
 ```sh
 tensorboard --logdir logs/fit/
 ```
+#TASK 1
 Task 1: Tensor Transformations & Reshaping
 
 Step 1: Generate a Random Tensor
@@ -105,50 +105,7 @@ plt.ylabel("Loss Value")
 plt.title("MSE vs Cross-Entropy Loss Comparison")
 plt.show()
 
-
-Task 3: Train a Model Using Different Optimizers
-
-Step 1: Load and Normalize MNIST Dataset
-(train_images, train_labels), (test_images, test_labels) = mnist.load_data()
-train_images, test_images = train_images / 255.0, test_images / 255.0
-The MNIST dataset contains grayscale handwritten digits (0-9).
-Normalization ensures values range between 0 and 1.
-
-Step 2: Define the Model
-def build_model():
-    model = Sequential([
-        Flatten(input_shape=(28, 28)),
-        Dense(128, activation='relu'),
-        Dense(10, activation='softmax')
-    ])
-    return model
-Flatten: Converts 2D images into 1D vectors.
-Dense(128, ReLU): Hidden layer with 128 neurons.
-Dense(10, Softmax): Output layer (for 10 digits).
-
-Step 3: Train Using Adam Optimizer
-adam_model = build_model()
-adam_model.compile(optimizer=Adam(), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-adam_history = adam_model.fit(train_images, train_labels, epochs=5, validation_data=(test_images, test_labels))
-Adam optimizer is adaptive and efficient.
-
-Step 4: Train Using SGD Optimizer
-sgd_model = build_model()
-sgd_model.compile(optimizer=SGD(), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-sgd_history = sgd_model.fit(train_images, train_labels, epochs=5, validation_data=(test_images, test_labels))
-SGD converges slower but generalizes well.
-
-Step 5: Compare Accuracy
-plt.plot(adam_history.history['accuracy'], label='Adam')
-plt.plot(sgd_history.history['accuracy'], label='SGD')
-plt.xlabel('Epoch')
-plt.ylabel('Accuracy')
-plt.title('Optimizer Comparison: Adam vs SGD')
-plt.legend()
-plt.show()
-
-
-Task 4: Neural Network Training with TensorBoard
+Task 3: Neural Network Training with TensorBoard
 
 Step 1: Enable TensorBoard Logging
 log_directory = "logs/fit/"
