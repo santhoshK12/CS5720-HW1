@@ -1,17 +1,16 @@
-# CS5720 Home Assignment 1
+Neural networks In-Home Assignment
+University of Central Missouri
+Course: Neural Networks and Deep Learning
+Term: summer 2025
+Student Name: SANTHOSH REDDY KISTIPATI
+Student ID: [700776947]
 
-**Student:** SANTHOSH REDDY KISTIPATI 
-**Course:** CS5720 Neural Networks and Deep Learning,
-student id : 700776947
-Summer 2025
-
-CS5720_HW1.ipynb`  
-
-  Overview of the Assignment
+Overview of the Assignment
 This repository contains the solution for **Neural networks Assignment, covering fundamental deep learning concepts using TensorFlow. The assignment consists of four main tasks:
 
 Tensor Operations & Reshaping
 Loss Function Analysis & Hyperparameter Adjustment
+Model Training Using Different Optimizers
 Neural Network Training with TensorBoard Logging
 Prerequisites
 Before executing the script, ensure the following are installed:
@@ -19,6 +18,7 @@ Before executing the script, ensure the following are installed:
 Python (>=3.7)
 TensorFlow (>=2.x)
 NumPy
+Matplotlib
 To install dependencies, execute:
 
 pip install tensorflow numpy matplotlib
@@ -30,9 +30,6 @@ cd Neural networks
 Run the script:
 
 python Neural networks Assignment.jpynb
-
-#task 1:
-
 Launching TensorBoard
 After training, logs can be viewed using TensorBoard:
 
@@ -57,6 +54,7 @@ Step 3: Modify Predictions and Recalculate Loss Slightly adjust y_predicted to s
 
 Step 4: Plot Loss Function Values Visualize loss comparison using Matplotlib. plt.bar(["MSE", "CCE"], [mse_result, cce_result], color=['blue', 'red']) plt.xlabel("Loss Type") plt.ylabel("Loss Value") plt.title("MSE vs Cross-Entropy Loss Comparison") plt.show()
 
+
 Task 3: Neural Network Training with TensorBoard
 
 Step 1: Enable TensorBoard Logging log_directory = "logs/fit/" os.makedirs(log_directory, exist_ok=True) Creates a log directory for TensorBoard.
@@ -64,4 +62,3 @@ Step 1: Enable TensorBoard Logging log_directory = "logs/fit/" os.makedirs(log_d
 Step 2: Train Model with TensorBoard Callback model_tb = build_model() model_tb.compile(optimizer=Adam(), loss='sparse_categorical_crossentropy', metrics=['accuracy']) tb_callback = tf.keras.callbacks.TensorBoard(log_dir=log_directory, histogram_freq=1) model_tb.fit(train_images, train_labels, epochs=5, validation_data=(test_images, test_labels), callbacks=[tb_callback]) Logs training accuracy and loss.
 
 Step 3: Launch TensorBoard print("To launch TensorBoard, use: tensorboard --logdir logs/fit/")
-
