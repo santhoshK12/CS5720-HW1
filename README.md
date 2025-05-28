@@ -28,7 +28,7 @@ pip install tensorflow numpy matplotlib
 ## Execution Instructions
 Clone the repository and navigate to the directory:
 ```sh
-git clone https://github.com/vamsidama/Neural networks.git
+git clone https://github.com/santhoshK12/CS5720-HW1/tree/main
 cd Neural networks
 ```
 Run the script:
