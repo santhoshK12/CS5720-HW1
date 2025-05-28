@@ -123,3 +123,11 @@ Step 3: Launch TensorBoard
 print("To launch TensorBoard, use: tensorboard --logdir logs/fit/")
 
 
+TASK 4: ANSWER THE QUESTIONS
+
+print("1.Observing accuracy curves: Adam converges quicker, whereas SGD takes longer but may generalize better.")
+print("2. Detecting overfitting using TensorBoard: A widening gap between training and validation accuracy signals overfitting.")
+print("3. Effect of increased epochs: More training can enhance accuracy initially but might lead to overfitting.")
+
+
+
